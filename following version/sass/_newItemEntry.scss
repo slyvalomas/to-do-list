@@ -1,36 +1,39 @@
 .NewItimeEntry{
-    position: sticky;
-    top: 0;
-    margin-bottom: 1rem;
-    padding:0.75rem;
-    border-radius:10px ;
-    form{
-        display: flex;
-        justify-content: space-between;
-        label{
-            position: absolute;
-            left: -10000px;
-        }
-        input[type="text"]{
-            width: 80%;
-            font-size: 1.25rem;
-            border: 2px solid $textBoxBorderColor;
-            border-radius: 10px;
-            padding: 0.75rem;
-            outline: none;
-        }
-        input[type="text"]:focus,
-        input[type="text"]:hover{
-            box-shadow: 4px 2px 5px #000;
-        }
-        button{
-            font-size: 1.25rem;
-            background-color: $addButtonColor;
-            padding: 0.75rem;
-            @include mp(768px){
-                font-size: 1.5rem;
-            }
-        }
+    background-color: $containerBackgroundColor;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 1px solid black;
+    label{
+        position: absolute;
+        right: 20000px;
+    }
+    input[type="text"]{
+        width:75%;
+        font-size: 1.25rem;
+        border-radius: 10px;
+        outline: none;
+        border: 1px solid $textBoxBorderColor;
+        padding: 0.75rem;
+    }
+    input[type="text"]:hover,input[type="text"]:focus{
+        box-shadow: $boxShadow;
+    }
+    button{
+        margin-left: 1rem;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        width: 3rem;
+        height: 3rem;
+        background-color:$addButtonColor ;
+    }
+    button:hover,button:focus{
+        box-shadow: $boxShadow;
     }
 }
-

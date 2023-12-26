@@ -8,41 +8,11 @@ const clearItems = document.getElementById("clearItems");
 
 let dataBase =[]
 
-//localStorage.setItem("realDataBase",JSON.stringify(dataBase));
 
+//add to local storage!!!!!!!!!!
 
 dataBase = JSON.parse(localStorage.getItem("realDataBase"))
-//-----
-//-----
-// itemEntryForm.addEventListener("submit",(event)=>{
 
-//     event.preventDefault();
-//     const itemValue=NewItem.value;
-//     dataBase.push(itemValue);
-//     console.log(dataBase);
-//     NewItem.value = "";
-//     let RealDataBase=localStorage.setItem("realDataBase",JSON.stringify(dataBase));
-//     // const getId=(x)=>{
-//     //     for (let i = 0;i<dataBase.length;i++ ){
-//     //         x = i ;
-//     //         console.log(x);
-//     //     }
-//     // }
-//     //getId()
-//     const  div=document.createElement("div")
-//     div.className="item"
-//     const checkbox = document.createElement("input")
-//     checkbox.type="checkbox"
-//     checkbox.className="check"
-//     checkbox.id= 1
-//     checkbox.tabIndex=0
-//     const label = document.createElement("label")
-//     label.htmlFor=1
-//     div.appendChild(checkbox)
-//     div.appendChild(label)
-//     listItems.appendChild(div)
-//     label.textContent=dataBase[1]
-// });
 clearItems.addEventListener("click",()=>{
     checkY()
 });

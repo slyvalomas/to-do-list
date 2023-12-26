@@ -1,47 +1,44 @@
-.listContainer{
-    margin-top: 1rem;
-    background-color:$containerBackgroundColor;
-    padding: 0.5rem;
-    width: 80%;
-    margin: auto;
-    margin-top: 1rem;
-    padding: 0.75rem;
-    border: 1px solid black;
-    border-radius: 10px;
+listContainer{
     min-height: 60vh;
+    padding: 0.75rem;
+    border-radius: 10px;
     .listTitle{
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-    }
-    button{
-        margin: 0;
-        margin-bottom: 0.25rem;
-        font-size: 1rem;
-        background-color: $clearButtonColor;
-    }
-    button:hover,button:focus{
-        box-shadow: $boxShadow;
-    }
-    input[type="checkbox"]{
-        min-height: 48px;
-        min-width: 48px;
-        @include mp(768px){
-            width: 60px;
-        height: 60px;
+        button{
+            font-size: 1rem;
+            background-color: $clearButtonColor;
+            padding: 0 0.1rem;
+            margin-bottom: 0.5rem;
+            @include mp(768px){
+                padding:  0 0.5rem;
+            }
         }
-    }
-    .item:hover,.item:focus{
-        text-decoration: underline;
+        hr{
+            width: 100%;
+        }
     }
     .item{
         display: flex;
+        justify-content: flex-start;
         align-items: center;
-        gap: 1rem;
-        margin: 1rem 0.25rem;
+        padding-top: 1rem;
+    }
+    input[type="checkbox"]{
+        text-align: center;
+        width: 2.5rem;
+        min-width: 48px;
+        height: 2.5rem;
+        min-height: 48px;
+        cursor: pointer;
+        margin-right: 1.5rem;
+    }
+    input[type="checkbox"]:focus + label{
+        text-decoration: underline;
     }
     label{
-        font-size: 1.25rem;
+        font-size: 1.1rem;
     }
 }
 

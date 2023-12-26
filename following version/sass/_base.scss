@@ -1,4 +1,4 @@
-$defaultFontColor:#000;
+$default-font-color:#000;
 $backGroundColor:#4a90e2;
 $containerBackgroundColor:#f2f2f2;
 $containerBorderColor:#000;
@@ -7,26 +7,37 @@ $buttonTextColor:#fff;
 $buttonHoverColor:#000;
 $addButtonColor:#4caf50;
 $clearButtonColor:#9f6060;
-$fontFamily: Montserrat, "sans-serif";
-$allContainersBackGround:rgb(242, 242, 242);
-$clearButtonColor: rgb(159, 96, 96);
-$addButtonColor:rgb(76, 175, 80);
-$boxShadow:rgb(0, 0, 0) 4px 2px 5px;
-$inputBorderColor:rgb(211, 211, 211);
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
-@mixin mp($px){
-    @media screen and (min-width:$px) {
-       @content
+
+@mixin mp($size){
+    @media only screen and (min-width:$size){
+        @content;
     }
 }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 html,body{
+    font-size: 16px;
+    font-family: "Montserrat" , "sans-serif";
+    color: $default-font-color;
+    width: 100%;
+    min-height: 100%;
+    @include mp(768px){
+        font-size: 22px;
+
+    }
+}
+body{
+    padding:20px ;
     background-color: $backGroundColor;
 }
-main{
-    margin: 1rem 0;
-    font-family: $fontFamily;
+section{
+    background-color: $containerBackgroundColor;
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+    border: 1px solid $containerBorderColor;
 }

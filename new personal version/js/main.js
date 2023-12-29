@@ -8,8 +8,8 @@ const clearItems = document.getElementById("clearItems");
 
 let dataBase =[]
 
+//localStorage.setItem("realDataBase",JSON.stringify(dataBase)); //remove is after anstaling the local storage
 
-//add to local storage!!!!!!!!!!
 
 dataBase = JSON.parse(localStorage.getItem("realDataBase"))
 

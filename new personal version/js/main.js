@@ -7,9 +7,12 @@ const clearItems = document.getElementById("clearItems");
 
 
 let dataBase =[]
-
 //localStorage.setItem("realDataBase",JSON.stringify(dataBase)); //remove is after anstaling the local storage
-
+if (localStorage.getItem("realDataBase")){
+    console.log("brahim")
+}else{
+    localStorage.setItem("realDataBase",JSON.stringify(dataBase));
+}
 
 dataBase = JSON.parse(localStorage.getItem("realDataBase"))
 
